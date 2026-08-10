@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" role="img" aria-labelledby="title desc">
+  <title id="title">Synapse-Shredder — local-first capture to organized Markdown</title>
+  <desc id="desc">A JavaScript and TypeScript system that turns web pages, text, and screenshots into organized Markdown through a desktop app, browser extension, and MCP tools.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="34" y1="12" x2="1170" y2="244" gradientUnits="userSpaceOnUse">
+      <stop class="background-start" stop-color="#050609"/>
+      <stop class="background-end" offset="1" stop-color="#0A0E17"/>
+    </linearGradient>
+    <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientTransform="translate(797 108) rotate(90) scale(172 302)">
+      <stop stop-color="#22D3EE" stop-opacity=".17"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violetGlow" cx="0" cy="0" r="1" gradientTransform="translate(1020 156) rotate(90) scale(176 288)">
+      <stop stop-color="#8B5CF6" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="spectral" x1="560" y1="125" x2="1128" y2="125" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9" stop-opacity=".18"/>
+      <stop offset=".48" stop-color="#67E8F9" stop-opacity=".9"/>
+      <stop offset=".72" stop-color="#8B8CFF" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#C4A7FF" stop-opacity=".18"/>
+    </linearGradient>
+    <linearGradient id="core" x1="756" y1="84" x2="839" y2="169" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9FDFF" stop-opacity=".22"/>
+      <stop offset=".38" stop-color="#132739" stop-opacity=".86"/>
+      <stop offset="1" stop-color="#17102C" stop-opacity=".94"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="758" y1="88" x2="839" y2="169" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FEFF" stop-opacity=".76"/>
+      <stop offset=".28" stop-color="#67E8F9" stop-opacity=".62"/>
+      <stop offset=".7" stop-color="#8B5CF6" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#C4A7FF" stop-opacity=".68"/>
+    </linearGradient>
+    <pattern id="grain" width="91" height="73" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="13" r=".55" fill="#FFFFFF" opacity=".08"/>
+      <circle cx="52" cy="8" r=".45" fill="#67E8F9" opacity=".08"/>
+      <circle cx="79" cy="38" r=".5" fill="#FFFFFF" opacity=".07"/>
+      <circle cx="28" cy="61" r=".5" fill="#C4A7FF" opacity=".08"/>
+    </pattern>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="nodeGlow" x="-200%" y="-200%" width="500%" height="500%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#67E8F9" flood-opacity=".72"/>
+    </filter>
+    <clipPath id="frame">
+      <rect x="1" y="1" width="1198" height="248" rx="28"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .background-start { stop-color: #050609; }
+    .background-end { stop-color: #0A0E17; }
+    .frame-stroke { stroke: rgba(255, 255, 255, .11); }
+    .text-primary { fill: #F6F8FC; }
+    .text-secondary { fill: #A3AABA; }
+    .text-muted { fill: #70798A; }
+    .hairline { stroke: rgba(255, 255, 255, .1); }
+    .glass { fill: rgba(255, 255, 255, .035); stroke: rgba(255, 255, 255, .11); }
+    .glass-strong { fill: rgba(255, 255, 255, .06); stroke: rgba(255, 255, 255, .14); }
+    .font { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2.8px; }
+    .display { font-size: 44px; font-weight: 660; letter-spacing: -1.8px; }
+    .body { font-size: 15px; font-weight: 510; letter-spacing: -.08px; }
+    .micro { font-size: 9px; font-weight: 700; letter-spacing: 1.65px; }
+    .input-label { font-size: 8px; font-weight: 700; letter-spacing: 1.25px; }
+    .signal { stroke-dasharray: 5 9; animation: signal 8s linear infinite; }
+    .core-breathe { animation: core-breathe 5.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .output-shift { animation: output-shift 6.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes signal { to { stroke-dashoffset: -112; } }
+    @keyframes core-breathe { 0%, 100% { transform: scale(.985); } 50% { transform: scale(1.025); } }
+    @keyframes output-shift { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(3px); } }
+    @media (prefers-color-scheme: light) {
+      .background-start { stop-color: #F8FAFC; }
+      .background-end { stop-color: #EEF2F8; }
+      .frame-stroke { stroke: rgba(15, 23, 42, .12); }
+      .text-primary { fill: #11151D; }
+      .text-secondary { fill: #596273; }
+      .text-muted { fill: #7C8594; }
+      .hairline { stroke: rgba(15, 23, 42, .11); }
+      .glass { fill: rgba(255, 255, 255, .54); stroke: rgba(15, 23, 42, .105); }
+      .glass-strong { fill: rgba(255, 255, 255, .74); stroke: rgba(15, 23, 42, .13); }
+    }
+    @media (prefers-reduced-transparency: reduce) {
+      .glass, .glass-strong { fill-opacity: .97; }
+    }
+    @media (prefers-contrast: more) {
+      .frame-stroke, .glass, .glass-strong { stroke-width: 1.5; }
+      .text-secondary { fill: #D9DEE8; }
+    }
+    @media (prefers-color-scheme: light) and (prefers-contrast: more) {
+      .text-secondary { fill: #252B37; }
+      .text-muted { fill: #4B5563; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .motion { animation: none !important; }
+    }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="250" fill="url(#background)"/>
+    <ellipse cx="797" cy="108" rx="326" ry="194" fill="url(#cyanGlow)"/>
+    <ellipse cx="1020" cy="156" rx="314" ry="196" fill="url(#violetGlow)"/>
+    <rect width="1200" height="250" fill="url(#grain)" opacity=".56"/>
+    <path d="M1 1H1199" stroke="url(#spectral)" stroke-opacity=".32"/>
+
+    <g class="font">
+      <circle cx="57" cy="45" r="3.5" fill="#67E8F9"/>
+      <circle cx="57" cy="45" r="7" fill="none" stroke="#67E8F9" stroke-opacity=".25"/>
+      <text class="eyebrow text-secondary" x="74" y="49">OPEN SOURCE · LOCAL-FIRST CAPTURE</text>
+      <text class="display text-primary" x="52" y="104">Synapse-Shredder</text>
+      <text class="body text-secondary" x="55" y="140">Web pages, text, and screenshots → organized Markdown.</text>
+      <text class="body text-secondary" x="55" y="164">Desktop app · browser extension · MCP tools</text>
+      <g transform="translate(54 191)">
+        <rect class="glass" width="173" height="27" rx="13.5"/>
+        <circle cx="16" cy="13.5" r="3" fill="#67E8F9"/>
+        <text class="micro text-secondary" x="29" y="17">JAVASCRIPT / TYPESCRIPT</text>
+      </g>
+    </g>
+
+    <line class="hairline" x1="515" y1="34" x2="515" y2="216"/>
+
+    <g class="font">
+      <g transform="translate(558 45)">
+        <rect class="glass" width="116" height="34" rx="17"/>
+        <circle cx="19" cy="17" r="7" fill="none" stroke="#67E8F9" stroke-opacity=".64"/>
+        <path d="M12 17H26M19 10C22 14 22 20 19 24M19 10C16 14 16 20 19 24" fill="none" stroke="#67E8F9" stroke-opacity=".48" stroke-width=".8"/>
+        <text class="input-label text-secondary" x="36" y="20">WEB PAGE</text>
+      </g>
+      <g transform="translate(558 108)">
+        <rect class="glass" width="116" height="34" rx="17"/>
+        <path d="M13 12H27M13 17H24M13 22H27" stroke="#8B8CFF" stroke-opacity=".7" stroke-linecap="round"/>
+        <text class="input-label text-secondary" x="36" y="20">TEXT</text>
+      </g>
+      <g transform="translate(558 171)">
+        <rect class="glass" width="116" height="34" rx="17"/>
+        <rect x="12" y="10" width="16" height="14" rx="3" fill="none" stroke="#C4A7FF" stroke-opacity=".65"/>
+        <circle cx="17" cy="15" r="2" fill="#C4A7FF" opacity=".7"/>
+        <path d="M14 22L19 18L22 20L26 16" fill="none" stroke="#C4A7FF" stroke-opacity=".65"/>
+        <text class="input-label text-secondary" x="36" y="20">SCREENSHOT</text>
+      </g>
+    </g>
+
+    <g fill="none" stroke="url(#spectral)" stroke-width="1.2">
+      <path class="signal motion" d="M674 62C727 62 735 91 763 111" opacity=".64"/>
+      <path class="signal motion" d="M674 125H758" opacity=".8"/>
+      <path class="signal motion" d="M674 188C727 188 735 159 763 139" opacity=".64"/>
+      <path class="signal motion" d="M839 125H904" opacity=".78"/>
+    </g>
+    <circle cx="726" cy="79" r="3" fill="#67E8F9" filter="url(#nodeGlow)"/>
+    <circle cx="718" cy="125" r="3" fill="#8B8CFF" filter="url(#nodeGlow)"/>
+    <circle cx="726" cy="171" r="3" fill="#C4A7FF" filter="url(#nodeGlow)"/>
+
+    <g class="core-breathe motion">
+      <circle cx="798" cy="125" r="58" fill="#8B5CF6" opacity=".14" filter="url(#softGlow)"/>
+      <rect x="758" y="85" width="80" height="80" rx="24" fill="url(#core)"/>
+      <rect x="758.5" y="85.5" width="79" height="79" rx="23.5" fill="none" stroke="url(#rim)"/>
+      <circle cx="798" cy="125" r="26" fill="none" stroke="#67E8F9" stroke-opacity=".2" stroke-dasharray="2 6"/>
+      <text class="font text-primary" x="798" y="136" text-anchor="middle" font-size="31" font-weight="630">#</text>
+    </g>
+
+    <g class="output-shift motion">
+      <g transform="translate(928 56)">
+        <rect class="glass" x="24" y="0" width="170" height="118" rx="18" opacity=".46"/>
+        <rect class="glass" x="12" y="10" width="170" height="118" rx="18" opacity=".68"/>
+        <rect class="glass-strong" x="0" y="20" width="170" height="118" rx="18"/>
+        <rect x="0" y="20" width="3" height="118" rx="1.5" fill="#8B8CFF" opacity=".82"/>
+        <circle cx="23" cy="45" r="3" fill="#67E8F9"/>
+        <rect x="36" y="41" width="76" height="7" rx="3.5" fill="#F6F8FC" opacity=".76"/>
+        <rect x="22" y="65" width="119" height="5" rx="2.5" fill="#9DA6B7" opacity=".34"/>
+        <rect x="22" y="79" width="96" height="5" rx="2.5" fill="#9DA6B7" opacity=".28"/>
+        <rect x="22" y="102" width="34" height="13" rx="6.5" fill="#67E8F9" opacity=".13" stroke="#67E8F9" stroke-opacity=".28"/>
+        <rect x="63" y="102" width="42" height="13" rx="6.5" fill="#8B5CF6" opacity=".14" stroke="#C4A7FF" stroke-opacity=".24"/>
+        <text class="font micro text-muted" x="85" y="133" text-anchor="middle">ORGANIZED MARKDOWN</text>
+      </g>
+    </g>
+
+    <g class="font micro text-muted">
+      <text x="615" y="230" text-anchor="middle">CAPTURE</text>
+      <text x="798" y="230" text-anchor="middle">NORMALIZE</text>
+      <text x="1013" y="230" text-anchor="middle">KNOWLEDGE</text>
+    </g>
+  </g>
+
+  <rect class="frame-stroke" x="1" y="1" width="1198" height="248" rx="28" fill="none" vector-effect="non-scaling-stroke"/>
+</svg>

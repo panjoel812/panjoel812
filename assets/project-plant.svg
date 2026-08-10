@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" role="img" aria-labelledby="plant-title plant-desc">
+  <title id="plant-title">PlantDiseaseAI — reproducible plant-leaf classification research</title>
+  <desc id="plant-desc">Controlled benchmarks, calibration and error analysis, Grad-CAM interpretation, and React and FastAPI demonstrations built with Python, PyTorch, and React.</desc>
+
+  <defs>
+    <linearGradient id="plant-background" x1="24" y1="12" x2="1180" y2="246" gradientUnits="userSpaceOnUse">
+      <stop class="background-start" stop-color="#050608"/>
+      <stop class="background-end" offset="1" stop-color="#0A1016"/>
+    </linearGradient>
+    <radialGradient id="plant-cyan-ambient" cx="0" cy="0" r="1" gradientTransform="translate(1014 123) rotate(90) scale(176 270)">
+      <stop class="cyan-ambient" stop-color="#67E8F9" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#67E8F9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="plant-violet-ambient" cx="0" cy="0" r="1" gradientTransform="translate(1124 210) rotate(90) scale(158 236)">
+      <stop class="violet-ambient" stop-color="#8B5CF6" stop-opacity=".21"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="plant-leaf-glass" x1="954" y1="70" x2="1065" y2="190" gradientUnits="userSpaceOnUse">
+      <stop class="leaf-highlight" stop-color="#D9FCFF" stop-opacity=".24"/>
+      <stop class="leaf-mid" offset=".42" stop-color="#17394A" stop-opacity=".76"/>
+      <stop class="leaf-deep" offset="1" stop-color="#071019" stop-opacity=".96"/>
+    </linearGradient>
+    <linearGradient id="plant-rim" x1="954" y1="72" x2="1063" y2="188" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FEFF" stop-opacity=".72"/>
+      <stop offset=".25" stop-color="#67E8F9" stop-opacity=".74"/>
+      <stop offset=".65" stop-color="#8B8CFF" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#C4A7FF" stop-opacity=".65"/>
+    </linearGradient>
+    <linearGradient id="plant-scan-gradient" x1="956" y1="0" x2="1065" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9" stop-opacity="0"/>
+      <stop offset=".2" stop-color="#67E8F9" stop-opacity=".85"/>
+      <stop offset=".52" stop-color="#F8FEFF"/>
+      <stop offset=".8" stop-color="#8B8CFF" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#8B8CFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="plant-chip" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity=".075"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".02"/>
+    </linearGradient>
+    <pattern id="plant-grain" width="80" height="68" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="12" r=".55" fill="#FFFFFF" opacity=".08"/>
+      <circle cx="48" cy="7" r=".45" fill="#FFFFFF" opacity=".065"/>
+      <circle cx="71" cy="34" r=".5" fill="#67E8F9" opacity=".07"/>
+      <circle cx="27" cy="55" r=".45" fill="#C4A7FF" opacity=".065"/>
+    </pattern>
+    <filter id="plant-blur-28" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <filter id="plant-blur-8" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="plant-shadow" x="-50%" y="-50%" width="200%" height="220%">
+      <feDropShadow dx="0" dy="14" stdDeviation="17" flood-color="#020409" flood-opacity=".68"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#67E8F9" flood-opacity=".15"/>
+    </filter>
+    <filter id="plant-shadow-light" x="-50%" y="-50%" width="200%" height="220%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#334155" flood-opacity=".16"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#0891B2" flood-opacity=".12"/>
+    </filter>
+    <clipPath id="plant-frame">
+      <rect x="1" y="1" width="1198" height="248" rx="28"/>
+    </clipPath>
+    <clipPath id="plant-leaf-clip">
+      <path d="M1005 188C965 180 943 153 947 118C951 91 968 72 990 60C1026 71 1054 96 1063 128C1072 161 1048 187 1005 188Z"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .background-start { stop-color: #050608; }
+    .background-end { stop-color: #0A1016; }
+    .frame-stroke { stroke: #FFFFFF; stroke-opacity: .105; }
+    .divider { stroke: #FFFFFF; stroke-opacity: .1; }
+    .text-primary { fill: #F5F7FA; }
+    .text-secondary { fill: #A4ADBA; }
+    .text-muted { fill: #737E8E; }
+    .glass { fill: #0E1722; fill-opacity: .42; stroke: #FFFFFF; stroke-opacity: .1; }
+    .chip { fill: #101720; fill-opacity: .5; stroke: #FFFFFF; stroke-opacity: .11; }
+    .font { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2.7px; }
+    .title { font-size: 42px; font-weight: 650; letter-spacing: -1.65px; }
+    .body { font-size: 15.5px; font-weight: 450; letter-spacing: .02px; }
+    .chip-label { font-size: 11px; font-weight: 650; letter-spacing: .2px; }
+    .micro { font-size: 9.5px; font-weight: 700; letter-spacing: 1.75px; }
+    .visual-label { font-size: 9px; font-weight: 700; letter-spacing: 1.55px; }
+    .scan-line { animation: plant-scan 5.8s cubic-bezier(.77, 0, .175, 1) infinite alternate; }
+    .heat-pulse { animation: plant-pulse 4.6s cubic-bezier(.77, 0, .175, 1) infinite alternate; transform-box: fill-box; transform-origin: center; }
+    .node-flow { stroke-dasharray: 3 8; animation: plant-flow 9s linear infinite; }
+    @keyframes plant-scan {
+      from { transform: translateY(-46px); opacity: .42; }
+      to { transform: translateY(48px); opacity: .92; }
+    }
+    @keyframes plant-pulse {
+      from { opacity: .58; transform: scale(.98); }
+      to { opacity: .9; transform: scale(1.03); }
+    }
+    @keyframes plant-flow { to { stroke-dashoffset: -88; } }
+    @media (prefers-color-scheme: light) {
+      .background-start { stop-color: #FAFBFC; }
+      .background-end { stop-color: #EEF4F7; }
+      .frame-stroke { stroke: #0F172A; stroke-opacity: .12; }
+      .divider { stroke: #0F172A; stroke-opacity: .1; }
+      .text-primary { fill: #0B0D12; }
+      .text-secondary { fill: #596273; }
+      .text-muted { fill: #778293; }
+      .glass { fill: #FFFFFF; fill-opacity: .64; stroke: #0F172A; stroke-opacity: .1; }
+      .chip { fill: #FFFFFF; fill-opacity: .72; stroke: #0F172A; stroke-opacity: .1; }
+      .leaf-highlight { stop-color: #FFFFFF; stop-opacity: .92; }
+      .leaf-mid { stop-color: #C8E6EB; stop-opacity: .72; }
+      .leaf-deep { stop-color: #A8C8D3; stop-opacity: .7; }
+      .cyan-ambient { stop-opacity: .11; }
+      .violet-ambient { stop-opacity: .1; }
+      .leaf-shell { filter: url(#plant-shadow-light); }
+    }
+    @media (prefers-reduced-transparency: reduce) {
+      .glass, .chip { fill-opacity: .94; }
+      .leaf-highlight, .leaf-mid, .leaf-deep { stop-opacity: .96; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .motion { animation: none !important; }
+    }
+  </style>
+
+  <g clip-path="url(#plant-frame)">
+    <rect width="1200" height="250" fill="url(#plant-background)"/>
+    <ellipse cx="1014" cy="123" rx="288" ry="184" fill="url(#plant-cyan-ambient)"/>
+    <ellipse cx="1124" cy="210" rx="244" ry="172" fill="url(#plant-violet-ambient)"/>
+    <rect width="1200" height="250" fill="url(#plant-grain)" opacity=".58"/>
+
+    <g class="font">
+      <g transform="translate(64 38)">
+        <circle cx="5" cy="-4" r="3.5" fill="#67E8F9"/>
+        <circle cx="5" cy="-4" r="7" fill="none" stroke="#67E8F9" stroke-opacity=".26"/>
+        <text class="eyebrow text-secondary" x="22" y="0">FEATURED RESEARCH · COMPUTER VISION</text>
+      </g>
+
+      <text class="title text-primary" x="62" y="91">PlantDiseaseAI</text>
+      <rect x="63" y="108" width="3" height="42" rx="1.5" fill="#67E8F9" opacity=".86"/>
+      <text class="body text-secondary" x="78" y="122">Reproducible plant-leaf classification with controlled benchmarks,</text>
+      <text class="body text-secondary" x="78" y="146">calibration &amp; error analysis, Grad-CAM, and React/FastAPI demos.</text>
+
+      <g transform="translate(62 170)">
+        <rect class="chip" width="70" height="27" rx="13.5"/>
+        <circle cx="15" cy="13.5" r="3" fill="#67E8F9"/>
+        <text class="chip-label text-secondary" x="26" y="17">Python</text>
+      </g>
+      <g transform="translate(140 170)">
+        <rect class="chip" width="78" height="27" rx="13.5"/>
+        <circle cx="15" cy="13.5" r="3" fill="#8B8CFF"/>
+        <text class="chip-label text-secondary" x="26" y="17">PyTorch</text>
+      </g>
+      <g transform="translate(226 170)">
+        <rect class="chip" width="67" height="27" rx="13.5"/>
+        <circle cx="15" cy="13.5" r="3" fill="#C4A7FF"/>
+        <text class="chip-label text-secondary" x="26" y="17">React</text>
+      </g>
+
+      <g class="micro text-muted">
+        <text x="62" y="222">BENCHMARKS</text>
+        <circle cx="156" cy="218.5" r="1.8" fill="#67E8F9"/>
+        <text x="172" y="222">CALIBRATION</text>
+        <circle cx="276" cy="218.5" r="1.8" fill="#8B8CFF"/>
+        <text x="292" y="222">INTERPRETABILITY</text>
+      </g>
+    </g>
+
+    <line class="divider" x1="762" y1="38" x2="762" y2="212" vector-effect="non-scaling-stroke"/>
+
+    <g>
+      <path class="node-flow motion" d="M802 79C847 79 867 96 907 108C929 115 944 113 960 107" fill="none" stroke="#67E8F9" stroke-opacity=".38" vector-effect="non-scaling-stroke"/>
+      <path class="node-flow motion" d="M802 169C847 169 873 154 909 143C930 137 946 139 963 146" fill="none" stroke="#8B8CFF" stroke-opacity=".36" vector-effect="non-scaling-stroke"/>
+      <circle cx="802" cy="79" r="3.5" fill="#67E8F9"/>
+      <circle cx="802" cy="169" r="3.5" fill="#8B8CFF"/>
+      <circle cx="835" cy="91" r="2" fill="#67E8F9" opacity=".56"/>
+      <circle cx="845" cy="158" r="2" fill="#C4A7FF" opacity=".54"/>
+
+      <circle cx="1006" cy="126" r="91" fill="#67E8F9" opacity=".08" filter="url(#plant-blur-28)"/>
+      <circle class="glass" cx="1006" cy="126" r="88"/>
+      <circle cx="1006" cy="126" r="75" fill="none" stroke="#FFFFFF" stroke-opacity=".075" stroke-dasharray="2 8" vector-effect="non-scaling-stroke"/>
+
+      <g class="leaf-shell" filter="url(#plant-shadow)">
+        <path d="M1005 188C965 180 943 153 947 118C951 91 968 72 990 60C1026 71 1054 96 1063 128C1072 161 1048 187 1005 188Z" fill="url(#plant-leaf-glass)"/>
+        <g clip-path="url(#plant-leaf-clip)">
+          <circle class="heat-pulse motion" cx="984" cy="105" r="24" fill="#67E8F9" opacity=".72" filter="url(#plant-blur-8)"/>
+          <circle class="heat-pulse motion" cx="1028" cy="132" r="28" fill="#8B8CFF" opacity=".66" filter="url(#plant-blur-8)"/>
+          <circle cx="1003" cy="159" r="21" fill="#C4A7FF" opacity=".4" filter="url(#plant-blur-8)"/>
+          <g class="scan-line motion">
+            <rect x="949" y="120" width="115" height="16" fill="#67E8F9" opacity=".08" filter="url(#plant-blur-8)"/>
+            <line x1="950" y1="128" x2="1064" y2="128" stroke="url(#plant-scan-gradient)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+          </g>
+        </g>
+        <path d="M1005 188C965 180 943 153 947 118C951 91 968 72 990 60C1026 71 1054 96 1063 128C1072 161 1048 187 1005 188Z" fill="none" stroke="url(#plant-rim)" stroke-width="1.35" vector-effect="non-scaling-stroke"/>
+        <path d="M1002 178C1006 146 1003 112 991 69" fill="none" stroke="#D9FCFF" stroke-opacity=".5" stroke-width="1.3" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+        <path d="M1003 145C987 136 974 125 963 112M1004 130C1020 119 1032 108 1040 97M1004 161C1022 153 1037 143 1050 130" fill="none" stroke="#D9FCFF" stroke-opacity=".24" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+      </g>
+
+      <g class="font" transform="translate(1084 91)">
+        <rect class="glass" width="86" height="69" rx="16"/>
+        <text class="visual-label text-muted" x="15" y="22">MODEL VIEW</text>
+        <circle cx="18" cy="42" r="3" fill="#67E8F9"/>
+        <line x1="30" y1="42" x2="68" y2="42" stroke="#67E8F9" stroke-opacity=".62" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="18" cy="54" r="3" fill="#8B8CFF"/>
+        <line x1="30" y1="54" x2="58" y2="54" stroke="#8B8CFF" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+      </g>
+    </g>
+  </g>
+
+  <rect class="frame-stroke" x="1" y="1" width="1198" height="248" rx="28" fill="none" vector-effect="non-scaling-stroke"/>
+</svg>

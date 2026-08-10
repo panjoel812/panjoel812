@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" role="img" aria-labelledby="title desc">
+  <title id="title">UrbanVision-Risk — on-device infrastructure inspection</title>
+  <desc id="desc">A Python system for on-device urban-infrastructure inspection and calibrated metrology with multi-view reliability, human review, and auditable local evidence.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="26" y1="10" x2="1172" y2="246" gradientUnits="userSpaceOnUse">
+      <stop class="background-start" stop-color="#050609"/>
+      <stop class="background-end" offset="1" stop-color="#0C0D18"/>
+    </linearGradient>
+    <radialGradient id="violetGlow" cx="0" cy="0" r="1" gradientTransform="translate(814 119) rotate(90) scale(183 326)">
+      <stop stop-color="#7C3AED" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientTransform="translate(1022 108) rotate(90) scale(154 254)">
+      <stop stop-color="#22D3EE" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="spectral" x1="549" y1="125" x2="1152" y2="125" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9" stop-opacity=".2"/>
+      <stop offset=".45" stop-color="#67E8F9" stop-opacity=".88"/>
+      <stop offset=".74" stop-color="#8B8CFF" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#C4A7FF" stop-opacity=".24"/>
+    </linearGradient>
+    <linearGradient id="scanGlass" x1="713" y1="43" x2="964" y2="211" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9FDFF" stop-opacity=".1"/>
+      <stop offset=".34" stop-color="#102335" stop-opacity=".64"/>
+      <stop offset="1" stop-color="#130E25" stop-opacity=".78"/>
+    </linearGradient>
+    <linearGradient id="scanRim" x1="712" y1="42" x2="965" y2="212" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FEFF" stop-opacity=".62"/>
+      <stop offset=".3" stop-color="#67E8F9" stop-opacity=".55"/>
+      <stop offset=".72" stop-color="#8B5CF6" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#C4A7FF" stop-opacity=".56"/>
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#A5F3FC" stroke-opacity=".06" stroke-width=".8"/>
+    </pattern>
+    <pattern id="grain" width="103" height="79" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="15" r=".55" fill="#FFFFFF" opacity=".08"/>
+      <circle cx="65" cy="9" r=".45" fill="#67E8F9" opacity=".08"/>
+      <circle cx="91" cy="47" r=".55" fill="#C4A7FF" opacity=".075"/>
+      <circle cx="37" cy="68" r=".45" fill="#FFFFFF" opacity=".07"/>
+    </pattern>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="nodeGlow" x="-200%" y="-200%" width="500%" height="500%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#67E8F9" flood-opacity=".66"/>
+    </filter>
+    <clipPath id="frame">
+      <rect x="1" y="1" width="1198" height="248" rx="28"/>
+    </clipPath>
+    <clipPath id="scanWindow">
+      <rect x="712" y="42" width="252" height="170" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .background-start { stop-color: #050609; }
+    .background-end { stop-color: #0C0D18; }
+    .frame-stroke { stroke: rgba(255, 255, 255, .11); }
+    .text-primary { fill: #F6F8FC; }
+    .text-secondary { fill: #A3AABA; }
+    .text-muted { fill: #70798A; }
+    .hairline { stroke: rgba(255, 255, 255, .1); }
+    .glass { fill: rgba(255, 255, 255, .035); stroke: rgba(255, 255, 255, .11); }
+    .glass-strong { fill: rgba(255, 255, 255, .06); stroke: rgba(255, 255, 255, .14); }
+    .font { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2.8px; }
+    .display { font-size: 44px; font-weight: 660; letter-spacing: -1.8px; }
+    .body { font-size: 15px; font-weight: 510; letter-spacing: -.08px; }
+    .micro { font-size: 9px; font-weight: 700; letter-spacing: 1.65px; }
+    .data { font-size: 8px; font-weight: 700; letter-spacing: 1px; }
+    .view-flow { stroke-dasharray: 4 8; animation: view-flow 8s linear infinite; }
+    .scan-line { animation: scan-line 5.4s cubic-bezier(.45, 0, .55, 1) infinite alternate; }
+    .reticle { animation: reticle 12s linear infinite; transform-box: fill-box; transform-origin: center; }
+    .evidence-pulse { animation: evidence-pulse 4.8s ease-in-out infinite; }
+    @keyframes view-flow { to { stroke-dashoffset: -96; } }
+    @keyframes scan-line { from { transform: translateY(-54px); } to { transform: translateY(52px); } }
+    @keyframes reticle { to { transform: rotate(360deg); } }
+    @keyframes evidence-pulse { 0%, 100% { opacity: .58; } 50% { opacity: 1; } }
+    @media (prefers-color-scheme: light) {
+      .background-start { stop-color: #F8FAFC; }
+      .background-end { stop-color: #F0F1F8; }
+      .frame-stroke { stroke: rgba(15, 23, 42, .12); }
+      .text-primary { fill: #11151D; }
+      .text-secondary { fill: #596273; }
+      .text-muted { fill: #7C8594; }
+      .hairline { stroke: rgba(15, 23, 42, .11); }
+      .glass { fill: rgba(255, 255, 255, .54); stroke: rgba(15, 23, 42, .105); }
+      .glass-strong { fill: rgba(255, 255, 255, .74); stroke: rgba(15, 23, 42, .13); }
+    }
+    @media (prefers-reduced-transparency: reduce) {
+      .glass, .glass-strong { fill-opacity: .97; }
+    }
+    @media (prefers-contrast: more) {
+      .frame-stroke, .glass, .glass-strong { stroke-width: 1.5; }
+      .text-secondary { fill: #D9DEE8; }
+    }
+    @media (prefers-color-scheme: light) and (prefers-contrast: more) {
+      .text-secondary { fill: #252B37; }
+      .text-muted { fill: #4B5563; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .motion { animation: none !important; }
+    }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="250" fill="url(#background)"/>
+    <ellipse cx="814" cy="119" rx="344" ry="198" fill="url(#violetGlow)"/>
+    <ellipse cx="1022" cy="108" rx="282" ry="176" fill="url(#cyanGlow)"/>
+    <rect width="1200" height="250" fill="url(#grain)" opacity=".56"/>
+    <path d="M1 1H1199" stroke="url(#spectral)" stroke-opacity=".32"/>
+
+    <g class="font">
+      <circle cx="57" cy="45" r="3.5" fill="#8B8CFF"/>
+      <circle cx="57" cy="45" r="7" fill="none" stroke="#8B8CFF" stroke-opacity=".25"/>
+      <text class="eyebrow text-secondary" x="74" y="49">OPEN SOURCE · ON-DEVICE INSPECTION</text>
+      <text class="display text-primary" x="52" y="104">UrbanVision-Risk</text>
+      <text class="body text-secondary" x="55" y="140">Urban-infrastructure inspection with calibrated metrology.</text>
+      <text class="body text-secondary" x="55" y="164">Multi-view reliability · human review · auditable local evidence</text>
+      <g transform="translate(54 191)">
+        <rect class="glass" width="88" height="27" rx="13.5"/>
+        <circle cx="16" cy="13.5" r="3" fill="#8B8CFF"/>
+        <text class="micro text-secondary" x="29" y="17">PYTHON</text>
+      </g>
+    </g>
+
+    <line class="hairline" x1="515" y1="34" x2="515" y2="216"/>
+
+    <g class="font">
+      <g transform="translate(550 51)">
+        <rect class="glass" width="124" height="59" rx="15"/>
+        <text class="data text-muted" x="13" y="17">VIEW / 01</text>
+        <path d="M13 43L25 32L35 39L51 23L66 43H13Z" fill="#67E8F9" opacity=".11" stroke="#67E8F9" stroke-opacity=".42"/>
+        <path d="M77 24V43M87 17V43M98 29V43M108 21V43" stroke="#A5F3FC" stroke-opacity=".36"/>
+      </g>
+      <g transform="translate(550 140)">
+        <rect class="glass" width="124" height="59" rx="15"/>
+        <text class="data text-muted" x="13" y="17">VIEW / 02</text>
+        <path d="M13 43L29 28L41 37L54 21L70 43H13Z" fill="#C4A7FF" opacity=".1" stroke="#C4A7FF" stroke-opacity=".4"/>
+        <path d="M80 28V43M90 20V43M101 31V43M110 24V43" stroke="#C4A7FF" stroke-opacity=".34"/>
+      </g>
+    </g>
+
+    <g fill="none" stroke="url(#spectral)" stroke-width="1.1">
+      <path class="view-flow motion" d="M674 80C696 80 699 96 712 108" opacity=".64"/>
+      <path class="view-flow motion" d="M674 169C696 169 699 153 712 141" opacity=".64"/>
+      <path class="view-flow motion" d="M964 125H1003" opacity=".74"/>
+    </g>
+    <circle cx="697" cy="91" r="3" fill="#67E8F9" filter="url(#nodeGlow)"/>
+    <circle cx="697" cy="158" r="3" fill="#C4A7FF" filter="url(#nodeGlow)"/>
+
+    <g clip-path="url(#scanWindow)">
+      <rect x="712" y="42" width="252" height="170" rx="24" fill="url(#scanGlass)"/>
+      <rect x="712" y="42" width="252" height="170" fill="url(#grid)"/>
+      <path d="M728 183L781 122L815 150L861 90L914 183H728Z" fill="#67E8F9" opacity=".07" stroke="#67E8F9" stroke-opacity=".3"/>
+      <path d="M734 183V135H762V183M782 183V111H817V183M837 183V128H866V183M887 183V100H936V183" fill="#8B8CFF" fill-opacity=".05" stroke="#A5F3FC" stroke-opacity=".26"/>
+      <path d="M887 123L913 100L936 123" fill="none" stroke="#C4A7FF" stroke-opacity=".38"/>
+      <path d="M722 183H953" stroke="#A5F3FC" stroke-opacity=".32"/>
+      <g class="scan-line motion">
+        <rect x="722" y="123" width="232" height="2" rx="1" fill="#67E8F9" opacity=".8"/>
+        <rect x="722" y="118" width="232" height="12" fill="#67E8F9" opacity=".05" filter="url(#softGlow)"/>
+      </g>
+      <g transform="translate(835 128)">
+        <circle r="42" fill="#8B5CF6" opacity=".11" filter="url(#softGlow)"/>
+        <circle r="31" fill="none" stroke="#67E8F9" stroke-opacity=".27"/>
+        <circle class="reticle motion" r="23" fill="none" stroke="url(#spectral)" stroke-width="1.3" stroke-dasharray="9 7"/>
+        <path d="M-39 0H-13M13 0H39M0-39V-13M0 13V39" stroke="#A5F3FC" stroke-opacity=".52"/>
+        <circle r="3.5" fill="#F6F8FC"/>
+        <circle r="7" fill="none" stroke="#67E8F9" stroke-opacity=".5"/>
+      </g>
+      <g fill="#67E8F9">
+        <circle cx="781" cy="122" r="2.5" opacity=".75"/>
+        <circle cx="861" cy="90" r="2.5" opacity=".75"/>
+        <circle cx="913" cy="100" r="2.5" opacity=".75"/>
+      </g>
+      <g class="font data text-muted">
+        <text x="729" y="62">CAL / 0.98</text>
+        <text x="949" y="202" text-anchor="end">LOCAL / 02</text>
+      </g>
+    </g>
+    <rect x="712.5" y="42.5" width="251" height="169" rx="23.5" fill="none" stroke="url(#scanRim)"/>
+
+    <g class="font" transform="translate(1003 51)">
+      <rect class="glass-strong" width="145" height="148" rx="20"/>
+      <text class="data text-muted" x="18" y="24">LOCAL EVIDENCE</text>
+      <line class="hairline" x1="18" y1="37" x2="127" y2="37"/>
+      <g transform="translate(18 53)">
+        <circle class="evidence-pulse motion" cx="5" cy="5" r="5" fill="#67E8F9" opacity=".9"/>
+        <path d="M2.5 5L4.3 6.8L8 3" fill="none" stroke="#071019" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <text class="data text-secondary" x="20" y="8">MULTI-VIEW</text>
+      </g>
+      <g transform="translate(18 84)">
+        <circle cx="5" cy="5" r="5" fill="#8B8CFF" opacity=".85"/>
+        <path d="M2.5 5L4.3 6.8L8 3" fill="none" stroke="#0B0D18" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <text class="data text-secondary" x="20" y="8">HUMAN REVIEW</text>
+      </g>
+      <g transform="translate(18 115)">
+        <circle cx="5" cy="5" r="5" fill="#C4A7FF" opacity=".85"/>
+        <path d="M2.5 5L4.3 6.8L8 3" fill="none" stroke="#130E25" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <text class="data text-secondary" x="20" y="8">AUDIT TRAIL</text>
+      </g>
+    </g>
+
+    <g class="font micro text-muted">
+      <text x="612" y="230" text-anchor="middle">MULTI-VIEW</text>
+      <text x="838" y="230" text-anchor="middle">CALIBRATE</text>
+      <text x="1076" y="230" text-anchor="middle">VERIFY</text>
+    </g>
+  </g>
+
+  <rect class="frame-stroke" x="1" y="1" width="1198" height="248" rx="28" fill="none" vector-effect="non-scaling-stroke"/>
+</svg>

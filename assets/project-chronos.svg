@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" role="img" aria-labelledby="chronos-title chronos-desc">
+  <title id="chronos-title">Chronos-orbit — reusable 3D time-locked message capsule</title>
+  <desc id="chronos-desc">A reusable message capsule built with React, TypeScript, and Three.js, featuring network-time unlocking and privacy-safe local overrides.</desc>
+
+  <defs>
+    <linearGradient id="chronos-background" x1="24" y1="10" x2="1178" y2="246" gradientUnits="userSpaceOnUse">
+      <stop class="background-start" stop-color="#050608"/>
+      <stop class="background-end" offset="1" stop-color="#0B0C17"/>
+    </linearGradient>
+    <radialGradient id="chronos-cyan-ambient" cx="0" cy="0" r="1" gradientTransform="translate(1004 124) rotate(90) scale(184 292)">
+      <stop class="cyan-ambient" stop-color="#67E8F9" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#67E8F9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="chronos-violet-ambient" cx="0" cy="0" r="1" gradientTransform="translate(1073 148) rotate(90) scale(180 282)">
+      <stop class="violet-ambient" stop-color="#8B5CF6" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="chronos-capsule" x1="963" y1="57" x2="1050" y2="193" gradientUnits="userSpaceOnUse">
+      <stop class="capsule-highlight" stop-color="#F2FCFF" stop-opacity=".27"/>
+      <stop class="capsule-mid" offset=".34" stop-color="#253052" stop-opacity=".68"/>
+      <stop class="capsule-end" offset="1" stop-color="#070914" stop-opacity=".94"/>
+    </linearGradient>
+    <linearGradient id="chronos-rim" x1="966" y1="59" x2="1050" y2="191" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FEFF" stop-opacity=".78"/>
+      <stop offset=".24" stop-color="#67E8F9" stop-opacity=".68"/>
+      <stop offset=".58" stop-color="#8B8CFF" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#C4A7FF" stop-opacity=".72"/>
+    </linearGradient>
+    <linearGradient id="chronos-orbit" x1="866" y1="78" x2="1144" y2="175" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9" stop-opacity="0"/>
+      <stop offset=".25" stop-color="#67E8F9" stop-opacity=".72"/>
+      <stop offset=".57" stop-color="#8B8CFF" stop-opacity=".26"/>
+      <stop offset=".84" stop-color="#C4A7FF" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#C4A7FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="chronos-chip" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity=".075"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".02"/>
+    </linearGradient>
+    <pattern id="chronos-grain" width="80" height="68" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="12" r=".55" fill="#FFFFFF" opacity=".08"/>
+      <circle cx="48" cy="7" r=".45" fill="#FFFFFF" opacity=".065"/>
+      <circle cx="71" cy="34" r=".5" fill="#67E8F9" opacity=".07"/>
+      <circle cx="27" cy="55" r=".45" fill="#C4A7FF" opacity=".065"/>
+    </pattern>
+    <filter id="chronos-blur-30" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="chronos-blur-7" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="chronos-shadow" x="-60%" y="-50%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="15" stdDeviation="18" flood-color="#020309" flood-opacity=".72"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#8B8CFF" flood-opacity=".2"/>
+    </filter>
+    <filter id="chronos-shadow-light" x="-60%" y="-50%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#334155" flood-opacity=".17"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#7C3AED" flood-opacity=".12"/>
+    </filter>
+    <clipPath id="chronos-frame">
+      <rect x="1" y="1" width="1198" height="248" rx="28"/>
+    </clipPath>
+    <clipPath id="chronos-capsule-clip">
+      <rect x="967" y="57" width="83" height="136" rx="41.5" transform="rotate(-10 1008.5 125)"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .background-start { stop-color: #050608; }
+    .background-end { stop-color: #0B0C17; }
+    .frame-stroke { stroke: #FFFFFF; stroke-opacity: .105; }
+    .divider { stroke: #FFFFFF; stroke-opacity: .1; }
+    .text-primary { fill: #F5F7FA; }
+    .text-secondary { fill: #A4ADBA; }
+    .text-muted { fill: #737E8E; }
+    .glass { fill: #101121; fill-opacity: .44; stroke: #FFFFFF; stroke-opacity: .1; }
+    .chip { fill: #131424; fill-opacity: .5; stroke: #FFFFFF; stroke-opacity: .11; }
+    .font { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2.7px; }
+    .title { font-size: 42px; font-weight: 650; letter-spacing: -1.65px; }
+    .body { font-size: 15.5px; font-weight: 450; letter-spacing: .02px; }
+    .chip-label { font-size: 11px; font-weight: 650; letter-spacing: .2px; }
+    .micro { font-size: 9.5px; font-weight: 700; letter-spacing: 1.75px; }
+    .visual-label { font-size: 9px; font-weight: 700; letter-spacing: 1.55px; }
+    .orbit-flow { stroke-dasharray: 5 12; animation: chronos-flow 11s linear infinite; }
+    .satellite { animation: chronos-orbit 18s linear infinite; transform-box: view-box; transform-origin: 1008px 125px; }
+    .signal { animation: chronos-signal 3.8s cubic-bezier(.77, 0, .175, 1) infinite alternate; transform-box: fill-box; transform-origin: center; }
+    @keyframes chronos-flow { to { stroke-dashoffset: -136; } }
+    @keyframes chronos-orbit { to { transform: rotate(360deg); } }
+    @keyframes chronos-signal {
+      from { opacity: .45; transform: scale(.96); }
+      to { opacity: .95; transform: scale(1.04); }
+    }
+    @media (prefers-color-scheme: light) {
+      .background-start { stop-color: #FAFBFC; }
+      .background-end { stop-color: #F0F1F8; }
+      .frame-stroke { stroke: #0F172A; stroke-opacity: .12; }
+      .divider { stroke: #0F172A; stroke-opacity: .1; }
+      .text-primary { fill: #0B0D12; }
+      .text-secondary { fill: #596273; }
+      .text-muted { fill: #778293; }
+      .glass { fill: #FFFFFF; fill-opacity: .64; stroke: #0F172A; stroke-opacity: .1; }
+      .chip { fill: #FFFFFF; fill-opacity: .72; stroke: #0F172A; stroke-opacity: .1; }
+      .capsule-highlight { stop-color: #FFFFFF; stop-opacity: .94; }
+      .capsule-mid { stop-color: #D8DAEF; stop-opacity: .76; }
+      .capsule-end { stop-color: #B9C2DC; stop-opacity: .68; }
+      .cyan-ambient { stop-opacity: .1; }
+      .violet-ambient { stop-opacity: .11; }
+      .capsule-shell { filter: url(#chronos-shadow-light); }
+    }
+    @media (prefers-reduced-transparency: reduce) {
+      .glass, .chip { fill-opacity: .94; }
+      .capsule-highlight, .capsule-mid, .capsule-end { stop-opacity: .96; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .motion { animation: none !important; }
+    }
+  </style>
+
+  <g clip-path="url(#chronos-frame)">
+    <rect width="1200" height="250" fill="url(#chronos-background)"/>
+    <ellipse cx="1004" cy="124" rx="300" ry="188" fill="url(#chronos-cyan-ambient)"/>
+    <ellipse cx="1073" cy="148" rx="292" ry="190" fill="url(#chronos-violet-ambient)"/>
+    <rect width="1200" height="250" fill="url(#chronos-grain)" opacity=".58"/>
+
+    <g class="font">
+      <g transform="translate(64 38)">
+        <circle cx="5" cy="-4" r="3.5" fill="#8B8CFF"/>
+        <circle cx="5" cy="-4" r="7" fill="none" stroke="#8B8CFF" stroke-opacity=".28"/>
+        <text class="eyebrow text-secondary" x="22" y="0">FEATURED BUILD · SPATIAL WEB</text>
+      </g>
+
+      <text class="title text-primary" x="62" y="91">Chronos-orbit</text>
+      <rect x="63" y="108" width="3" height="42" rx="1.5" fill="#8B8CFF" opacity=".9"/>
+      <text class="body text-secondary" x="78" y="122">A reusable 3D time-locked message capsule with network-time</text>
+      <text class="body text-secondary" x="78" y="146">unlocking and privacy-safe local overrides.</text>
+
+      <g transform="translate(62 170)">
+        <rect class="chip" width="67" height="27" rx="13.5"/>
+        <circle cx="15" cy="13.5" r="3" fill="#67E8F9"/>
+        <text class="chip-label text-secondary" x="26" y="17">React</text>
+      </g>
+      <g transform="translate(137 170)">
+        <rect class="chip" width="96" height="27" rx="13.5"/>
+        <circle cx="15" cy="13.5" r="3" fill="#8B8CFF"/>
+        <text class="chip-label text-secondary" x="26" y="17">TypeScript</text>
+      </g>
+      <g transform="translate(241 170)">
+        <rect class="chip" width="83" height="27" rx="13.5"/>
+        <circle cx="15" cy="13.5" r="3" fill="#C4A7FF"/>
+        <text class="chip-label text-secondary" x="26" y="17">Three.js</text>
+      </g>
+
+      <g class="micro text-muted">
+        <text x="62" y="222">NETWORK TIME</text>
+        <circle cx="171" cy="218.5" r="1.8" fill="#67E8F9"/>
+        <text x="187" y="222">LOCAL PRIVACY</text>
+        <circle cx="299" cy="218.5" r="1.8" fill="#8B8CFF"/>
+        <text x="315" y="222">REUSABLE CORE</text>
+      </g>
+    </g>
+
+    <line class="divider" x1="762" y1="38" x2="762" y2="212" vector-effect="non-scaling-stroke"/>
+
+    <g>
+      <line x1="802" y1="125" x2="1169" y2="125" stroke="#67E8F9" stroke-opacity=".1" vector-effect="non-scaling-stroke"/>
+      <g stroke="#FFFFFF" stroke-opacity=".14" vector-effect="non-scaling-stroke">
+        <line x1="815" y1="120" x2="815" y2="130"/>
+        <line x1="842" y1="122" x2="842" y2="128"/>
+        <line x1="869" y1="120" x2="869" y2="130"/>
+        <line x1="1140" y1="120" x2="1140" y2="130"/>
+        <line x1="1167" y1="122" x2="1167" y2="128"/>
+      </g>
+
+      <ellipse class="orbit-flow motion" cx="1008" cy="125" rx="166" ry="63" transform="rotate(-12 1008 125)" fill="none" stroke="url(#chronos-orbit)" stroke-width="1.1" vector-effect="non-scaling-stroke"/>
+      <ellipse class="orbit-flow motion" cx="1008" cy="125" rx="136" ry="43" transform="rotate(18 1008 125)" fill="none" stroke="url(#chronos-orbit)" stroke-opacity=".52" vector-effect="non-scaling-stroke"/>
+      <ellipse cx="1008" cy="125" rx="98" ry="98" fill="none" stroke="#FFFFFF" stroke-opacity=".055" stroke-dasharray="2 10" vector-effect="non-scaling-stroke"/>
+
+      <g class="satellite motion">
+        <circle cx="1170" cy="91" r="8" fill="#8B8CFF" opacity=".13" filter="url(#chronos-blur-7)"/>
+        <circle cx="1170" cy="91" r="3.5" fill="#C4A7FF"/>
+        <circle cx="1170" cy="91" r="7" fill="none" stroke="#C4A7FF" stroke-opacity=".26"/>
+      </g>
+
+      <circle cx="1008" cy="125" r="82" fill="#8B8CFF" opacity=".13" filter="url(#chronos-blur-30)"/>
+      <g class="capsule-shell" filter="url(#chronos-shadow)">
+        <rect x="967" y="57" width="83" height="136" rx="41.5" transform="rotate(-10 1008.5 125)" fill="url(#chronos-capsule)"/>
+        <g clip-path="url(#chronos-capsule-clip)">
+          <ellipse class="signal motion" cx="1008" cy="126" rx="48" ry="32" fill="#67E8F9" opacity=".12" filter="url(#chronos-blur-7)"/>
+          <path d="M962 114C986 121 1018 118 1054 105M965 145C990 137 1021 139 1056 151" fill="none" stroke="url(#chronos-orbit)" stroke-opacity=".6" vector-effect="non-scaling-stroke"/>
+        </g>
+        <rect x="967" y="57" width="83" height="136" rx="41.5" transform="rotate(-10 1008.5 125)" fill="none" stroke="url(#chronos-rim)" stroke-width="1.35" vector-effect="non-scaling-stroke"/>
+        <path d="M978 80C983 70 992 64 1002 62" fill="none" stroke="#FFFFFF" stroke-opacity=".65" stroke-width="2" stroke-linecap="round"/>
+      </g>
+
+      <g transform="translate(1008 125)">
+        <rect x="-24" y="-16" width="48" height="34" rx="9" fill="#090D18" fill-opacity=".74" stroke="#FFFFFF" stroke-opacity=".18"/>
+        <path d="M-11-16V-23C-11-31-5-37 3-37C11-37 17-31 17-23V-16" fill="none" stroke="#D9FCFF" stroke-opacity=".78" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="3" fill="#67E8F9"/>
+        <path d="M0 3V9" stroke="#67E8F9" stroke-width="2" stroke-linecap="round"/>
+      </g>
+
+      <g class="font" transform="translate(1085 161)">
+        <rect class="glass" width="91" height="43" rx="14"/>
+        <circle cx="16" cy="15" r="3" fill="#67E8F9"/>
+        <text class="visual-label text-muted" x="27" y="18">TIME SYNC</text>
+        <text class="visual-label text-secondary" x="16" y="33">VERIFIED</text>
+      </g>
+
+      <g class="font" transform="translate(805 48)">
+        <rect class="glass" width="85" height="43" rx="14"/>
+        <text class="visual-label text-muted" x="14" y="17">OVERRIDE</text>
+        <text class="visual-label text-secondary" x="14" y="32">LOCAL ONLY</text>
+      </g>
+    </g>
+  </g>
+
+  <rect class="frame-stroke" x="1" y="1" width="1198" height="248" rx="28" fill="none" vector-effect="non-scaling-stroke"/>
+</svg>
