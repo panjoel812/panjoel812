@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">Joel Pan — student, builder, and technical writer</title>
+  <desc id="desc">Joel Pan turns difficult ideas in mathematics, artificial intelligence, and software into thoughtful systems.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="46" y1="18" x2="1160" y2="466" gradientUnits="userSpaceOnUse">
+      <stop class="background-start" stop-color="#050608"/>
+      <stop class="background-end" offset="1" stop-color="#0B0F17"/>
+    </linearGradient>
+    <radialGradient id="ambientCyan" cx="0" cy="0" r="1" gradientTransform="translate(1018 210) rotate(90) scale(252 310)">
+      <stop class="ambient-cyan-start" stop-color="#67E8F9" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#67E8F9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ambientViolet" cx="0" cy="0" r="1" gradientTransform="translate(1090 290) rotate(90) scale(274 330)">
+      <stop class="ambient-violet-start" stop-color="#8B5CF6" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lensGlass" cx="0" cy="0" r="1" gradientTransform="translate(1002 188) rotate(51) scale(210)">
+      <stop class="glass-highlight" stop-color="#E7FBFF" stop-opacity=".18"/>
+      <stop class="glass-mid" offset=".32" stop-color="#15253A" stop-opacity=".62"/>
+      <stop class="glass-end" offset=".78" stop-color="#071019" stop-opacity=".9"/>
+      <stop class="glass-deep" offset="1" stop-color="#03050A" stop-opacity=".96"/>
+    </radialGradient>
+    <radialGradient id="lensInner" cx="0" cy="0" r="1" gradientTransform="translate(1006 196) rotate(53) scale(147)">
+      <stop stop-color="#78E4FF" stop-opacity=".16"/>
+      <stop offset=".45" stop-color="#8B8CFF" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#C4A7FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="field" x1="624" y1="240" x2="1200" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#78E4FF" stop-opacity="0"/>
+      <stop offset=".28" stop-color="#78E4FF" stop-opacity=".35"/>
+      <stop offset=".7" stop-color="#8B8CFF" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#C4A7FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="924" y1="118" x2="1170" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FEFF" stop-opacity=".74"/>
+      <stop offset=".14" stop-color="#78E4FF" stop-opacity=".76"/>
+      <stop offset=".48" stop-color="#8B8CFF" stop-opacity=".16"/>
+      <stop offset=".78" stop-color="#C4A7FF" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".07"/>
+    </linearGradient>
+    <linearGradient id="caustic" x1="949" y1="126" x2="1144" y2="214" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset=".32" stop-color="#FFFFFF" stop-opacity=".92"/>
+      <stop offset=".58" stop-color="#78E4FF" stop-opacity=".86"/>
+      <stop offset="1" stop-color="#C4A7FF" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grain" width="96" height="84" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="13" r=".65" fill="#FFFFFF" opacity=".09"/>
+      <circle cx="52" cy="7" r=".5" fill="#FFFFFF" opacity=".07"/>
+      <circle cx="81" cy="34" r=".55" fill="#78E4FF" opacity=".08"/>
+      <circle cx="29" cy="62" r=".45" fill="#FFFFFF" opacity=".075"/>
+      <circle cx="71" cy="75" r=".55" fill="#C4A7FF" opacity=".07"/>
+    </pattern>
+    <filter id="blur44" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="44"/>
+    </filter>
+    <filter id="blur12" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="lensShadow" x="-70%" y="-70%" width="240%" height="240%">
+      <feDropShadow dx="-12" dy="24" stdDeviation="30" flood-color="#020309" flood-opacity=".74"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#8B8CFF" flood-opacity=".23"/>
+    </filter>
+    <filter id="lensShadowLight" x="-70%" y="-70%" width="240%" height="240%">
+      <feDropShadow dx="-8" dy="20" stdDeviation="24" flood-color="#334155" flood-opacity=".18"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#8B8CFF" flood-opacity=".14"/>
+    </filter>
+    <clipPath id="frame">
+      <rect x="1" y="1" width="1198" height="478" rx="34"/>
+    </clipPath>
+    <clipPath id="lensClip">
+      <circle cx="1048" cy="240" r="136"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .background-start { stop-color: #050608; }
+    .background-end { stop-color: #0B0F17; }
+    .frame-stroke { stroke: rgba(255, 255, 255, .11); }
+    .text-primary { fill: #F5F7FA; }
+    .text-secondary { fill: #9AA3B2; }
+    .text-muted { fill: #6D7687; }
+    .hairline { stroke: rgba(255, 255, 255, .11); }
+    .glass-surface { fill: rgba(255, 255, 255, .025); stroke: rgba(255, 255, 255, .095); }
+    .lens-shadow { fill: #03050A; opacity: .72; }
+    .font { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 3.4px; }
+    .display { font-size: 96px; font-weight: 650; letter-spacing: -4.8px; }
+    .descriptor { font-size: 19px; font-weight: 500; letter-spacing: .05px; }
+    .statement { font-size: 28px; font-weight: 560; letter-spacing: -.45px; }
+    .micro { font-size: 10px; font-weight: 650; letter-spacing: 2px; }
+    .field-flow { stroke-dasharray: 7 15; animation: field-flow 12s linear infinite; }
+    .lens-arrive { animation: lens-arrive 900ms cubic-bezier(.23, 1, .32, 1) both; transform-box: fill-box; transform-origin: center; filter: url(#lensShadow); }
+    .copy-arrive { animation: copy-arrive 700ms cubic-bezier(.23, 1, .32, 1) both; }
+    .caustic-orbit { animation: caustic-orbit 32s linear infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes field-flow { to { stroke-dashoffset: -132; } }
+    @keyframes lens-arrive { from { transform: scale(.985); opacity: .45; } to { transform: scale(1); opacity: 1; } }
+    @keyframes copy-arrive { from { transform: translateY(8px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes caustic-orbit { to { transform: rotate(360deg); } }
+    @media (prefers-color-scheme: light) {
+      .background-start { stop-color: #F8F9FB; }
+      .background-end { stop-color: #EEF2F7; }
+      .frame-stroke { stroke: rgba(15, 23, 42, .12); }
+      .text-primary { fill: #0B0D12; }
+      .text-secondary { fill: #596273; }
+      .text-muted { fill: #7B8493; }
+      .hairline { stroke: rgba(15, 23, 42, .12); }
+      .glass-surface { fill: rgba(255, 255, 255, .42); stroke: rgba(15, 23, 42, .105); }
+      .lens-shadow { fill: #64748B; opacity: .13; }
+      .glass-highlight { stop-color: #FFFFFF; stop-opacity: .84; }
+      .glass-mid { stop-color: #DCECF6; stop-opacity: .62; }
+      .glass-end { stop-color: #A9BCD2; stop-opacity: .34; }
+      .glass-deep { stop-color: #D7E2EE; stop-opacity: .72; }
+      .ambient-cyan-start { stop-opacity: .11; }
+      .ambient-violet-start { stop-opacity: .12; }
+      .lens-arrive { filter: url(#lensShadowLight); }
+    }
+    @media (prefers-reduced-transparency: reduce) {
+      .glass-surface { fill-opacity: .96; }
+      .glass-highlight, .glass-mid, .glass-end { stop-opacity: .96; }
+    }
+    @media (prefers-contrast: more) {
+      .text-secondary { fill: #D9DEE7; }
+      .frame-stroke, .glass-surface { stroke-width: 1.5; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .motion { animation: none !important; }
+    }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="480" fill="url(#background)"/>
+    <ellipse cx="1018" cy="210" rx="322" ry="270" fill="url(#ambientCyan)"/>
+    <ellipse cx="1090" cy="290" rx="354" ry="306" fill="url(#ambientViolet)"/>
+    <rect width="1200" height="480" fill="url(#grain)" opacity=".58"/>
+
+    <g class="font copy-arrive motion">
+      <g transform="translate(72 72)">
+        <circle cx="5" cy="-4" r="4" fill="#78E4FF"/>
+        <circle cx="5" cy="-4" r="8" fill="none" stroke="#78E4FF" stroke-opacity=".28"/>
+        <text class="eyebrow text-secondary" x="25" y="0">STUDENT · BUILDER · TECHNICAL WRITER</text>
+      </g>
+
+      <text class="display text-primary" x="66" y="188"><tspan>Joel</tspan><tspan dx="20">Pan</tspan></text>
+      <text class="descriptor text-secondary" x="72" y="229">Mathematics · Artificial Intelligence · Software</text>
+      <line class="hairline" x1="72" y1="267" x2="588" y2="267" vector-effect="non-scaling-stroke"/>
+      <rect x="72" y="299" width="3" height="63" rx="1.5" fill="#78E4FF" opacity=".82"/>
+      <text class="statement text-primary" x="92" y="322">Turning difficult ideas</text>
+      <text class="statement text-primary" x="92" y="357">into thoughtful systems.</text>
+
+      <g class="micro text-muted">
+        <text x="72" y="418">THINK DEEPLY</text>
+        <circle cx="208" cy="414" r="2" fill="#78E4FF"/>
+        <text x="230" y="418">BUILD CAREFULLY</text>
+        <circle cx="394" cy="414" r="2" fill="#8B8CFF"/>
+        <text x="416" y="418">EXPLAIN CLEARLY</text>
+      </g>
+    </g>
+
+    <g fill="none" stroke="url(#field)" stroke-width="1" vector-effect="non-scaling-stroke">
+      <path class="field-flow motion" d="M624 133C751 133 823 175 912 214C1012 258 1103 211 1206 166" opacity=".36"/>
+      <path class="field-flow motion" d="M608 186C750 186 830 207 920 228C1018 252 1110 229 1208 210" opacity=".48"/>
+      <path class="field-flow motion" d="M600 240H1210" opacity=".46"/>
+      <path class="field-flow motion" d="M608 294C748 294 829 272 920 252C1018 230 1110 252 1208 276" opacity=".4"/>
+      <path class="field-flow motion" d="M624 347C751 347 824 306 913 267C1013 223 1104 270 1206 316" opacity=".3"/>
+    </g>
+
+    <circle cx="1048" cy="240" r="176" fill="#8B8CFF" opacity=".15" filter="url(#blur44)"/>
+    <circle class="lens-shadow" cx="1048" cy="240" r="151" filter="url(#blur12)"/>
+
+    <g class="lens-arrive motion">
+      <circle cx="1048" cy="240" r="138" fill="url(#lensGlass)"/>
+      <circle cx="1048" cy="240" r="121" fill="url(#lensInner)"/>
+
+      <g clip-path="url(#lensClip)" fill="none" stroke="url(#field)" stroke-width="1.3" vector-effect="non-scaling-stroke">
+        <path d="M890 126C965 151 987 199 1034 223C1090 251 1153 194 1215 149" opacity=".5"/>
+        <path d="M884 181C959 197 992 218 1037 232C1094 250 1157 222 1217 199" opacity=".68"/>
+        <path d="M880 242C956 250 998 245 1042 240C1097 234 1155 245 1220 255" opacity=".8"/>
+        <path d="M884 302C959 285 992 263 1037 249C1094 231 1157 260 1217 283" opacity=".63"/>
+        <path d="M890 356C965 330 987 282 1034 258C1090 230 1153 287 1215 332" opacity=".45"/>
+      </g>
+
+      <circle cx="1048" cy="240" r="137" fill="none" stroke="url(#rim)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+      <circle cx="1048" cy="240" r="119" fill="none" stroke="#FFFFFF" stroke-opacity=".12" vector-effect="non-scaling-stroke"/>
+      <circle cx="1048" cy="240" r="91" fill="none" stroke="#78E4FF" stroke-opacity=".1" stroke-dasharray="2 9" vector-effect="non-scaling-stroke"/>
+
+      <g class="caustic-orbit motion">
+        <path d="M948 147A137 137 0 0 1 1144 151" fill="none" stroke="url(#caustic)" stroke-width="5" stroke-linecap="round" filter="url(#blur12)" opacity=".7"/>
+        <path d="M957 139A137 137 0 0 1 1129 138" fill="none" stroke="url(#caustic)" stroke-width="1.7" stroke-linecap="round"/>
+      </g>
+
+      <circle cx="981" cy="183" r="3" fill="#FFFFFF" opacity=".88"/>
+      <circle cx="1128" cy="217" r="3.5" fill="#78E4FF" opacity=".76"/>
+      <circle cx="1097" cy="319" r="3" fill="#C4A7FF" opacity=".7"/>
+    </g>
+
+    <g class="font">
+      <rect class="glass-surface" x="838" y="398" width="294" height="38" rx="19"/>
+      <circle cx="861" cy="417" r="3" fill="#78E4FF"/>
+      <text class="micro text-secondary" x="879" y="421">CURIOSITY · MADE CONCRETE</text>
+    </g>
+  </g>
+
+  <rect class="frame-stroke" x="1" y="1" width="1198" height="478" rx="34" fill="none" vector-effect="non-scaling-stroke"/>
+</svg>

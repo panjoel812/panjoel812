@@ -1,95 +1,73 @@
 <div align="center">
-  <img src="./assets/hero.svg" width="100%" alt="Joel Pan — a student who learns deeply, builds carefully, and explains clearly" />
+  <img src="./assets/hero-aperture.svg" width="100%" alt="Joel Pan — turning difficult ideas in mathematics, artificial intelligence, and software into thoughtful systems" />
+
+  <br /><br />
+
+  <a href="#about"><strong>About</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#focus"><strong>Focus</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#building"><strong>Building</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#toolkit"><strong>Toolkit</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://panjoel812.github.io"><strong>Notes ↗</strong></a>
 </div>
-
-<h1 align="center">Joel Pan</h1>
-
-<p align="center">
-  <strong>Student · Software builder · Technology creator</strong>
-</p>
-
-<p align="center">
-  Exploring mathematics, computer science, artificial intelligence,<br />
-  and the craft of turning ideas into thoughtful software.
-</p>
-
-<p align="center">
-  <a href="#about-me">About</a> ·
-  <a href="#what-i-care-about">Interests</a> ·
-  <a href="#what-i-build">Work</a> ·
-  <a href="https://panjoel812.github.io">Notes</a>
-</p>
 
 <br />
 
-## About me
+## About
 
-I'm **Joel Pan**, also known as **Panjoel**. I'm a student who enjoys moving between theory and practice: understanding a mathematical idea, expressing it as an algorithm, implementing it as software, and finally explaining it in language other people can use.
+Hi, I'm **Joel Pan**—**Panjoel** online. I'm a student working across mathematics, computer science, artificial intelligence, and product design. I enjoy following an idea through its whole life: from a question, to a model, to working software, and finally to an explanation someone else can use.
 
-My interests sit at the intersection of **mathematics, computer science, artificial intelligence, and product design**. I am especially drawn to problems that require both rigorous thinking and creative construction—from algorithms and intelligent systems to small tools with carefully considered interfaces.
+I learn by making ideas answer to reality. I start from first principles, reduce the problem to an honest experiment, study where it breaks, and keep refining until the result becomes useful, reliable, and clear. That loop connects nearly everything here—from algorithms and AI experiments to interfaces and technical notes.
 
-I learn best by building. A concept becomes real to me when I can test it, find its limits, improve it, and write down what I discovered.
+<br />
 
-## What I care about
+<div align="center">
+  <img src="./assets/practice-loop.svg" width="100%" alt="Think, build, share: start with the underlying question, make the idea testable, and turn discoveries into something useful" />
+</div>
 
-- **Strong foundations** — mathematics, algorithms, and first-principles understanding before abstraction.
-- **Intelligent systems** — machine learning, deep learning, AI agents, and better ways for software to reason and assist.
-- **Useful engineering** — turning an idea into a reliable system instead of stopping at a convincing demo.
-- **Clear communication** — making difficult knowledge easier to understand without removing its depth.
-- **Thoughtful design** — software should not only work; it should feel calm, coherent, and respectful of its user.
+<br />
 
-## What I build
+## Focus
+
+<strong>Foundations</strong><br />
+Mathematics, algorithms, data structures, and the first-principles thinking that makes computational ideas precise.
+
+<strong>Intelligent systems</strong><br />
+Deep learning, language models, AI agents, efficient architectures, and scientific applications of artificial intelligence.
+
+<strong>Human-centered software</strong><br />
+Reliable engineering, thoughtful interfaces, accessibility, and explanations that preserve depth while making difficult ideas easier to approach.
+
+## Building
 
 ### Poblumi · 啵露米
 
-[Poblumi](https://panjoel812.github.io) is my personal knowledge space. I use it to collect mathematical notes, computer science ideas, programming practice, and the lessons hidden inside things I build. Its goal is simple: make serious learning feel a little more approachable and alive.
+[Poblumi](https://panjoel812.github.io) is my personal knowledge space—a growing collection of mainly Chinese notes on mathematics, computer science, programming, and the lessons hidden inside things I build.
 
-### Learning projects and experiments
+I want it to make serious learning feel clearer, warmer, and more alive without making the ideas themselves less rigorous.
 
-I turn new ideas into small programs, prototypes, and technical experiments. Some begin with an algorithm; others begin with a question about AI, the web, or how an interface should behave. The useful ones gradually become public projects and notes.
+### Experiments
 
-### Technical writing
+I use small programs and prototypes as instruments for thinking. Some begin with an algorithm; others with a question about AI, the web, or how an interface should behave. The useful ones gradually become public projects, tools, or notes.
 
-Writing is part of how I learn. My notes are mainly in Chinese and cover mathematics, data structures, algorithms, Python, software engineering, and the occasional exploration that does not fit neatly into one category.
+### Right now
 
-## Current interests
+I'm strengthening my foundations in mathematics and deep learning, exploring agents and efficient intelligent systems, and refining Poblumi into a more welcoming place to learn.
 
-- **AI and machine learning:** deep learning, language models, agents, efficient intelligent systems, and AI for science.
-- **Algorithms and systems:** data structures, performance, system design, and the path from a clean model to dependable code.
-- **Mathematics:** the structures and proofs that make computational ideas precise.
-- **Human-centered software:** interfaces, motion, accessibility, and the small details that make technology easier to trust.
+## Toolkit
 
-## Working set
-
-**Languages** · `Python` `C++` `JavaScript`
-
-**AI and data** · `PyTorch` `Deep Learning` `LLMs` `AI Agents`
-
-**Web** · `React` `Next.js` `Flask`
-
-**Foundations** · `Algorithms` `Data Structures` `Git` `macOS` `Linux`
-
-## How I work
-
-1. Start with the underlying question, not the fashionable tool.
-2. Reduce the idea to something small enough to test honestly.
-3. Build, measure, and revise when reality disagrees.
-4. Write down the result so the next iteration starts from a clearer place.
-5. Polish the details that make a working system feel considered.
-
-## Right now
-
-- Strengthening my foundations in mathematics and deep learning.
-- Exploring AI agents, efficient intelligent systems, and scientific applications of AI.
-- Building Poblumi into a clearer and more welcoming knowledge space.
-- Publishing what I learn through code and long-form technical notes.
+My everyday toolkit centers on `Python`, `C++`, `PyTorch`, `JavaScript`, `React`, `Next.js`, and `Flask`. I work across macOS and Linux with Git, choosing tools around the question rather than the trend.
 
 > Code is the language. Mathematics is the foundation. Curiosity is the engine.
 
-## Elsewhere
-
-- [Poblumi · field notes and essays](https://panjoel812.github.io)
-- [Public repositories and experiments](https://github.com/panjoel812?tab=repositories)
+<p align="center">
+  <a href="https://panjoel812.github.io"><strong>Read the notes ↗</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/panjoel812?tab=repositories"><strong>Explore the work ↗</strong></a>
+</p>
 
 <details>
   <summary><strong>GitHub activity</strong></summary>

@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Think, build, share — Joel Pan's practice loop</title>
+  <desc id="desc">A three-step practice: start with the underlying question, make the idea testable, and turn discoveries into something useful.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="52" y1="20" x2="1140" y2="548" gradientUnits="userSpaceOnUse">
+      <stop class="background-start" stop-color="#050609"/>
+      <stop class="background-end" offset="1" stop-color="#0A0D14"/>
+    </linearGradient>
+    <linearGradient id="spectral" x1="360" y1="302" x2="840" y2="302" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9"/>
+      <stop offset=".5" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#C4B5FD"/>
+    </linearGradient>
+    <linearGradient id="cardRim" x1="432" y1="166" x2="768" y2="438" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9" stop-opacity=".45"/>
+      <stop offset=".48" stop-color="#FFFFFF" stop-opacity=".11"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity=".46"/>
+    </linearGradient>
+    <radialGradient id="violetGlow" cx="0" cy="0" r="1" gradientTransform="translate(646 304) rotate(90) scale(252 386)">
+      <stop stop-color="#7C3AED" stop-opacity=".22"/>
+      <stop offset=".55" stop-color="#312E81" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#312E81" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientTransform="translate(584 261) rotate(90) scale(164 244)">
+      <stop stop-color="#22D3EE" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="buildCore" cx="0" cy="0" r="1" gradientTransform="translate(717 216) rotate(90) scale(27)">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset=".24" stop-color="#A5F3FC"/>
+      <stop offset=".66" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#312E81"/>
+    </radialGradient>
+    <pattern id="stars" width="154" height="124" patternUnits="userSpaceOnUse">
+      <circle cx="17" cy="24" r=".8" fill="#FFFFFF" opacity=".16"/>
+      <circle cx="91" cy="18" r="1" fill="#A5F3FC" opacity=".18"/>
+      <circle cx="137" cy="74" r=".7" fill="#C4B5FD" opacity=".19"/>
+      <circle cx="43" cy="101" r=".55" fill="#FFFFFF" opacity=".18"/>
+    </pattern>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="nodeGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#67E8F9" flood-opacity=".58"/>
+    </filter>
+    <clipPath id="frame">
+      <rect x="1" y="1" width="1198" height="558" rx="34"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .background-start { stop-color: #050609; }
+    .background-end { stop-color: #0A0D14; }
+    .frame-stroke { stroke: rgba(255, 255, 255, .11); }
+    .text-primary { fill: #F7F8FC; }
+    .text-secondary { fill: #A6ABBA; }
+    .text-muted { fill: #747B8E; }
+    .hairline { stroke: rgba(255, 255, 255, .11); }
+    .card { fill: rgba(255, 255, 255, .04); stroke: rgba(255, 255, 255, .105); }
+    .card-main { fill: rgba(255, 255, 255, .065); }
+    .icon-stroke { stroke: rgba(165, 243, 252, .56); }
+    .font { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .eyebrow { font-size: 12px; font-weight: 650; letter-spacing: 3.2px; }
+    .display { font-size: 42px; font-weight: 650; letter-spacing: -1.8px; }
+    .index { font-size: 10px; font-weight: 650; letter-spacing: 2.4px; }
+    .card-title { font-size: 34px; font-weight: 650; letter-spacing: -1px; }
+    .card-title-main { font-size: 40px; font-weight: 650; letter-spacing: -1.3px; }
+    .body { font-size: 16px; font-weight: 520; letter-spacing: -.05px; }
+    .domain { font-size: 9px; font-weight: 650; letter-spacing: 1.7px; }
+    .micro { font-size: 10px; font-weight: 650; letter-spacing: 2.1px; }
+    .pulse-left { animation: pulse-left 8s cubic-bezier(.77, 0, .175, 1) infinite; }
+    .pulse-right { animation: pulse-right 8s 4s cubic-bezier(.77, 0, .175, 1) infinite; }
+    .core-breathe { animation: core-breathe 5.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .think-orbit { animation: orbit 24s linear infinite; transform-box: fill-box; transform-origin: center; }
+    .share-signal { animation: share-signal 6.5s ease-in-out infinite; }
+    @keyframes pulse-left {
+      0%, 12% { transform: translateX(0); opacity: 0; }
+      24% { opacity: 1; }
+      52% { transform: translateX(62px); opacity: .9; }
+      66%, 100% { transform: translateX(62px); opacity: 0; }
+    }
+    @keyframes pulse-right {
+      0%, 12% { transform: translateX(0); opacity: 0; }
+      24% { opacity: 1; }
+      52% { transform: translateX(62px); opacity: .9; }
+      66%, 100% { transform: translateX(62px); opacity: 0; }
+    }
+    @keyframes core-breathe { 0%, 100% { transform: scale(.985); opacity: .82; } 50% { transform: scale(1.02); opacity: 1; } }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    @keyframes share-signal { 0%, 100% { opacity: .28; } 50% { opacity: .86; } }
+    @media (prefers-color-scheme: light) {
+      .background-start { stop-color: #F7F8FC; }
+      .background-end { stop-color: #EDF0F7; }
+      .frame-stroke { stroke: rgba(20, 25, 38, .12); }
+      .text-primary { fill: #151721; }
+      .text-secondary { fill: #565E70; }
+      .text-muted { fill: #7A8293; }
+      .hairline { stroke: rgba(20, 25, 38, .12); }
+      .card { fill: rgba(255, 255, 255, .56); stroke: rgba(20, 25, 38, .105); }
+      .card-main { fill: rgba(255, 255, 255, .74); }
+      .icon-stroke { stroke: rgba(8, 145, 178, .48); }
+    }
+    @media (prefers-reduced-transparency: reduce) {
+      .card, .card-main { fill-opacity: .96; }
+    }
+    @media (prefers-contrast: more) {
+      .card, .card-main { stroke-width: 1.5; }
+      .text-secondary { fill: #D7DAE3; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .motion { animation: none !important; }
+    }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="560" fill="url(#background)"/>
+    <ellipse cx="646" cy="304" rx="410" ry="270" fill="url(#violetGlow)"/>
+    <ellipse cx="584" cy="261" rx="260" ry="190" fill="url(#cyanGlow)"/>
+    <rect width="1200" height="560" fill="url(#stars)" opacity=".54"/>
+
+    <g class="font">
+      <text class="eyebrow text-secondary" x="72" y="70">A PERSONAL PRACTICE</text>
+      <text class="display text-primary" x="70" y="126">Think. Build. Share.</text>
+      <text class="micro text-muted" x="1128" y="70" text-anchor="end">LEARNING IN PUBLIC</text>
+    </g>
+
+    <g fill="none" stroke="url(#spectral)" stroke-width="1.2">
+      <path d="M360 302H432" opacity=".58"/>
+      <path d="M768 302H840" opacity=".58"/>
+    </g>
+    <circle class="pulse-left motion" cx="366" cy="302" r="4" fill="#67E8F9" filter="url(#nodeGlow)"/>
+    <circle class="pulse-right motion" cx="774" cy="302" r="4" fill="#A78BFA" filter="url(#nodeGlow)"/>
+
+    <g>
+      <rect class="card" x="72" y="190" width="288" height="224" rx="26"/>
+      <path d="M98 190H334" stroke="#FFFFFF" stroke-opacity=".12"/>
+
+      <g class="think-orbit motion" transform="translate(310 232)" fill="none">
+        <ellipse class="icon-stroke" rx="25" ry="10" transform="rotate(26)"/>
+        <ellipse class="icon-stroke" rx="25" ry="10" transform="rotate(-26)"/>
+        <circle cx="-22" cy="-11" r="3" fill="#67E8F9" stroke="none"/>
+        <circle cx="21" cy="12" r="3" fill="#C4B5FD" stroke="none"/>
+      </g>
+
+      <g class="font">
+        <text class="index text-muted" x="102" y="228">01 / THINK</text>
+        <text class="card-title text-primary" x="100" y="284">Think</text>
+        <text class="body text-secondary" x="100" y="326">Start with the</text>
+        <text class="body text-secondary" x="100" y="349">underlying question.</text>
+        <text class="domain text-muted" x="100" y="386">MATHEMATICS · FIRST PRINCIPLES</text>
+      </g>
+    </g>
+
+    <g>
+      <rect class="card card-main" x="432" y="166" width="336" height="272" rx="30"/>
+      <rect x="432.5" y="166.5" width="335" height="271" rx="29.5" fill="none" stroke="url(#cardRim)"/>
+      <path d="M462 166H738" stroke="#FFFFFF" stroke-opacity=".18"/>
+
+      <g transform="translate(716 216)">
+        <circle r="39" fill="#7C3AED" opacity=".16" filter="url(#softGlow)"/>
+        <g class="core-breathe motion">
+          <circle r="16" fill="url(#buildCore)"/>
+          <circle r="25" fill="none" stroke="#A5F3FC" stroke-opacity=".32" stroke-dasharray="2 6"/>
+          <path d="M-30 0H-16M16 0H30M0-30V-16M0 16V30" stroke="#A5F3FC" stroke-opacity=".48"/>
+          <circle cx="-30" r="3" fill="#67E8F9"/>
+          <circle cx="30" r="3" fill="#C4B5FD"/>
+          <circle cy="-30" r="3" fill="#FFFFFF"/>
+          <circle cy="30" r="3" fill="#A78BFA"/>
+        </g>
+      </g>
+
+      <g class="font">
+        <text class="index text-muted" x="466" y="207">02 / BUILD</text>
+        <text class="card-title-main text-primary" x="464" y="274">Build</text>
+        <text class="body text-secondary" x="464" y="319">Make the idea testable.</text>
+        <text class="domain text-muted" x="464" y="402">AI · ALGORITHMS · SOFTWARE</text>
+      </g>
+    </g>
+
+    <g>
+      <rect class="card" x="840" y="190" width="288" height="224" rx="26"/>
+      <path d="M866 190H1102" stroke="#FFFFFF" stroke-opacity=".12"/>
+
+      <g class="icon-stroke share-signal motion" transform="translate(1077 233)" fill="none" stroke-linecap="round">
+        <path d="M-23 10C-10-1 1-1 14 10"/>
+        <path d="M-28 1C-10-16 7-16 25 1" opacity=".72"/>
+        <path d="M-32-8C-10-30 12-30 34-8" opacity=".42"/>
+        <circle cx="-4" cy="17" r="3" fill="#C4B5FD" stroke="none"/>
+      </g>
+
+      <g class="font">
+        <text class="index text-muted" x="870" y="228">03 / SHARE</text>
+        <text class="card-title text-primary" x="868" y="284">Share</text>
+        <text class="body text-secondary" x="868" y="326">Turn discoveries into</text>
+        <text class="body text-secondary" x="868" y="349">something useful.</text>
+        <text class="domain text-muted" x="868" y="386">WRITING · DESIGN · OPEN SOURCE</text>
+      </g>
+    </g>
+
+    <g class="font">
+      <line class="hairline" x1="72" y1="490" x2="1128" y2="490"/>
+      <text class="micro text-muted" x="600" y="526" text-anchor="middle">QUESTIONS  →  MODELS  →  SOFTWARE  →  EXPLANATIONS</text>
+    </g>
+  </g>
+
+  <rect class="frame-stroke" x="1" y="1" width="1198" height="558" rx="34" fill="none"/>
+</svg>
